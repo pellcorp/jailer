@@ -40,7 +40,6 @@ import org.kohsuke.args4j.Option;
  * @author Ralf Wisser
  */
 public class CommandLineParser {
-
     /**
      * The singleton (per thread).
      */
@@ -111,6 +110,11 @@ public class CommandLineParser {
         System.out.println("    -xml-date pattern for dates in XML and LIQUIBASE_XML export file");
         System.out.println("    -xml-time pattern for times in XML and LIQUIBASE_XML export file");
         System.out.println("    -xml-timestamp pattern for time-stamps in XML and LIQUIBASE_XML export file");
+        System.out.println("    -t prevents deletion of entities from 'tabu'-tables");
+        System.out.println();
+        System.out.println("  jailer delete [options] <extraction-model> <jdbc-driver-class> <db-URL> <db-user> <db-password>");
+        System.out.println("    Like export, but skips the export and creates a delete-script (see option '-d')");
+        System.out.println("    -where subject condition. Optional, overrides condition in extraction-model");
         System.out.println("    -t prevents deletion of entities from 'tabu'-tables");
         System.out.println();
         System.out.println("  jailer create-ddl");
